@@ -1,23 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <div
-      class="
-        osahan-header-nav
-        shadow-sm
-        p-3
-        d-flex
-        align-items-center
-        bg-purple
-      "
-    >
-      <h5 class="font-weight-normal mb-0 text-white">
-        <a class="text-purple" routerLink="/home"
-          ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
-        ></a>
-        <ion-title>Search</ion-title>
-      </h5>
-      <div class="ml-auto d-flex align-items-center">
-        <!-- <a class="text-white h6 mb-0" routerLink="/home"
+  <!-- <ion-toolbar> -->
+  <div
+    class="osahan-header-nav shadow-sm p-3 d-flex align-items-center bg-purple"
+  >
+    <h5 class="font-weight-normal mb-0 text-white">
+      <a class="text-purple" routerLink="/home"
+        ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
+      ></a>
+      <ion-title>Search</ion-title>
+    </h5>
+    <div class="ml-auto d-flex align-items-center">
+      <!-- <a class="text-white h6 mb-0" routerLink="/home"
           ><fa-icon icon="search" class="icofont-search-1"></fa-icon
         ></a>
         <a
@@ -28,14 +21,14 @@
           ><fa-icon icon="filter" class="icofont-filter"></fa-icon
         ></a> -->
 
-        <ion-buttons slot="end">
-          <ion-menu-button
-            ><fa-icon icon="bars" class="icofont-navigation-menu"></fa-icon
-          ></ion-menu-button>
-        </ion-buttons>
-      </div>
+      <ion-buttons slot="end">
+        <ion-menu-button
+          ><fa-icon icon="bars" class="icofont-navigation-menu"></fa-icon
+        ></ion-menu-button>
+      </ion-buttons>
     </div>
-  </ion-toolbar>
+  </div>
+  <!-- </ion-toolbar> -->
 </ion-header>
 
 <ion-content id="content" fullscreen>
@@ -66,16 +59,16 @@
   <ion-grid>
     <ion-row>
       <ion-col
-        size="6"
+        size="12"
         margin
         *ngFor="let company of companys; trackBy: trackByFn"
         routerLink="/listing-detail/{{ company.id }}"
-        class="text-dark px-0"
+        class="text-dark px-0 py-0"
       >
         <div
           class="
             list_item_gird
-            m-0
+            m-1
             bg-white
             shadow-sm
             listing-item
@@ -83,34 +76,23 @@
             p-3
           "
         >
-          <div class="tic-div">
-            <div class="list-item-img">
-              <img src="assets/img/listing/item1.png" class="img-fluid" />
-            </div>
+          <div class="tic-div mb-2">
             <p class="mb-0 l-hght-10">{{ company.companyName }}</p>
             <span class="text-purple small text-small"
               >{{ company.firstName }} {{ company.lastName }}</span
             >
-            <div class="start-rating small mb-3">
-              <fa-icon icon="star" class="icofont-star text-orange"></fa-icon>
-              <fa-icon icon="star" class="icofont-star text-orange"></fa-icon>
-              <fa-icon icon="star" class="icofont-star text-orange"></fa-icon>
-              <fa-icon icon="star" class="icofont-star text-orange"></fa-icon>
-              <fa-icon icon="star" class="icofont-star text-muted"></fa-icon>
-              <span class="text-dark">4.0</span>
-            </div>
           </div>
           <div class="d-flex">
             <div class="bus_details w-100">
               <div class="d-flex l-hght-10">
                 <div>
-                  <small class="text-muted mb-2 d-block">Firm Activity</small>
+                  <small class="text-muted d-block">Firm Activity</small>
                   <p class="l-hght-10">{{ company.firmActivity }}</p>
                 </div>
               </div>
               <div class="d-flex l-hght-10">
                 <div>
-                  <small class="text-muted mb-2 d-block"
+                  <small class="text-muted d-block"
                     >Service Providing / vehicle Type</small
                   >
                   <p class="l-hght-20">{{ company.serviceProviding }}</p>
@@ -118,11 +100,15 @@
               </div>
               <div class="d-flex l-hght-10">
                 <div>
-                  <small class="text-muted mb-2 d-block">Location</small>
+                  <small class="text-muted d-block">Location</small>
                   <p class="l-hght-10">{{ company.location }}</p>
                 </div>
               </div>
             </div>
+            <fa-icon
+              icon="angle-double-right"
+              class="angle-double-right"
+            ></fa-icon>
           </div>
         </div>
       </ion-col>

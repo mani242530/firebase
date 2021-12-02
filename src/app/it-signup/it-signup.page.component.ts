@@ -54,7 +54,7 @@ export class SignUpPageComponent implements OnInit {
       companyName: new FormControl('', Validators.required),
       firmActivity: new FormControl('', Validators.required),
       serviceProviding: new FormControl('', Validators.required),
-      landlineNumber: new FormControl('', Validators.required),
+      landlineNumber: new FormControl(''),
       mobileNumber: new FormControl('', Validators.required),
       location: new FormControl('', Validators.required),
     });

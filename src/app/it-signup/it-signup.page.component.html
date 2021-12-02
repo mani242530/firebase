@@ -1,23 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <div
-      class="
-        osahan-header-nav
-        shadow-sm
-        p-3
-        d-flex
-        align-items-center
-        bg-purple
-      "
-    >
-      <h5 class="font-weight-normal mb-0 text-white">
-        <a class="text-purple" routerLink="/get-started"
-          ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
-        ></a>
-        <ion-title>Create an Account</ion-title>
-      </h5>
-    </div>
-  </ion-toolbar>
+  <!-- <ion-toolbar> -->
+  <div
+    class="osahan-header-nav shadow-sm p-3 d-flex align-items-center bg-purple"
+  >
+    <h5 class="font-weight-normal mb-0 text-white">
+      <a class="text-purple" routerLink="/get-started"
+        ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
+      ></a>
+      <ion-title>Create an Account</ion-title>
+    </h5>
+  </div>
+  <!-- </ion-toolbar> -->
 </ion-header>
 
 <ion-content id="content" fullscreen>
@@ -29,11 +22,10 @@
     maxBufferPx="1350"
   > -->
   <div class="osahan-signup">
-    <div class="px-3">
+    <div class="px-3 py-3">
       <form [formGroup]="createCompanyForm" #createForm>
         <ion-list>
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">First Name</ion-label>
+          <div class="form-group mb-3">
             <ion-input
               class="form-control rc-form-control"
               placeholder="First name"
@@ -44,8 +36,7 @@
             ></ion-input>
           </div>
 
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">Last Name</ion-label>
+          <div class="form-group mb-3">
             <ion-input
               class="form-control rc-form-control"
               placeholder="Last name"
@@ -56,8 +47,7 @@
             ></ion-input>
           </div>
 
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">Company Name</ion-label>
+          <div class="form-group mb-3">
             <ion-input
               class="form-control rc-form-control"
               placeholder="Company Name"
@@ -68,13 +58,12 @@
             ></ion-input>
           </div>
 
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">Firm Activity</ion-label>
+          <div class="form-group mb-3">
             <ion-select
               interface="popover"
-              class="form-control rc-form-control"
+              class="form-control rc-form-control native-select"
               role="combobox"
-              placeholder="Select One"
+              placeholder="Select Firm Activity"
               slot
               formControlName="firmActivity"
               required
@@ -88,14 +77,11 @@
             </ion-select>
           </div>
 
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1"
-              >Service Providing</ion-label
-            >
+          <div class="form-group mb-3">
             <ion-select
               multiple="true"
-              class="form-control rc-form-control"
-              placeholder="Select Multiple"
+              class="form-control rc-form-control native-select"
+              placeholder="Select Service Providing"
               formControlName="serviceProviding"
               cancelText="cancel"
               okText="ok"
@@ -110,12 +96,11 @@
             </ion-select>
           </div>
 
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">Location</ion-label>
+          <div class="form-group mb-3">
             <ion-select
               interface="popover"
-              class="form-control rc-form-control"
-              placeholder="Select your Location"
+              class="form-control rc-form-control native-select"
+              placeholder="Select Location"
               formControlName="location"
               required
             >
@@ -128,20 +113,7 @@
             </ion-select>
           </div>
 
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">Landline Number</ion-label>
-            <ion-input
-              class="form-control rc-form-control"
-              placeholder="Landline Number"
-              inputMode="tel"
-              clearInput="true"
-              formControlName="landlineNumber"
-              required
-            ></ion-input>
-          </div>
-
-          <div class="form-group mb-2">
-            <ion-label class="text-muted f-10 mb-1">Mobile Number</ion-label>
+          <div class="form-group mb-3">
             <ion-input
               class="form-control rc-form-control"
               placeholder="Mobile Number"
@@ -151,12 +123,23 @@
               required
             ></ion-input>
           </div>
+
+          <div class="form-group mb-3">
+            <ion-input
+              class="form-control rc-form-control"
+              placeholder="Landline Number"
+              inputMode="tel"
+              clearInput="true"
+              formControlName="landlineNumber"
+            ></ion-input>
+          </div>
         </ion-list>
         <button
           type="submit"
           class="btn btn-purple btn-block osahanbus-btn mb-3 rounded-1 mt-3"
           slot="end"
           fill="clear"
+          [disabled]="!createCompanyForm.valid"
           (click)="createCompany(createCompanyForm.value)"
         >
           REGISTER

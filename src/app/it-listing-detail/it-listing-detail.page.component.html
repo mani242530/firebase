@@ -1,30 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <div
-      class="
-        osahan-header-nav
-        shadow-sm
-        p-3
-        d-flex
-        align-items-center
-        bg-purple
-      "
-    >
-      <h5 class="font-weight-normal mb-0 text-white">
-        <a class="text-purple" routerLink="/listing"
-          ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
-        ></a>
-        <ion-title>Company Details</ion-title>
-      </h5>
-      <div class="ml-auto d-flex align-items-center">
-        <ion-buttons slot="end">
-          <ion-menu-button
-            ><fa-icon icon="bars" class="icofont-navigation-menu"></fa-icon
-          ></ion-menu-button>
-        </ion-buttons>
-      </div>
+  <!-- <ion-toolbar> -->
+  <div
+    class="osahan-header-nav shadow-sm p-3 d-flex align-items-center bg-purple"
+  >
+    <h5 class="font-weight-normal mb-0 text-white">
+      <a class="text-purple" routerLink="/listing"
+        ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
+      ></a>
+      <ion-title>Company Details</ion-title>
+    </h5>
+    <div class="ml-auto d-flex align-items-center">
+      <ion-buttons slot="end">
+        <ion-menu-button
+          ><fa-icon icon="bars" class="icofont-navigation-menu"></fa-icon
+        ></ion-menu-button>
+      </ion-buttons>
     </div>
-  </ion-toolbar>
+  </div>
+  <!-- </ion-toolbar> -->
 </ion-header>
 
 <ion-content id="content" fullscreen>
@@ -54,27 +47,6 @@
                 </ion-label>
 
                 <div class="start-rating f-10">
-                  <fa-icon
-                    icon="star"
-                    class="icofont-star text-orange"
-                  ></fa-icon>
-                  <fa-icon
-                    icon="star"
-                    class="icofont-star text-orange"
-                  ></fa-icon>
-                  <fa-icon
-                    icon="star"
-                    class="icofont-star text-orange"
-                  ></fa-icon>
-                  <fa-icon
-                    icon="star"
-                    class="icofont-star text-orange"
-                  ></fa-icon>
-                  <fa-icon
-                    icon="star"
-                    class="icofont-star text-muted"
-                  ></fa-icon>
-                  <span class="text-dark">4.0</span>
                   <div class="d-flex mt-2">
                     <p class="m-0">
                       <i class="icofont-google-map mr-1 text-danger"></i
@@ -87,7 +59,7 @@
             <div class="bus-details pt-2 pb-0 px-2">
               <div class="info" id="info">
                 <ion-label>
-                  <h3 class="font-weight-normal mb-3">
+                  <h3 class="font-weight-normal mb-1">
                     About {{ company.companyName }}
                   </h3>
                 </ion-label>
@@ -102,6 +74,28 @@
                 </p>
               </div>
             </div>
+            <div class="bus-details pt-2 pb-0 px-2">
+              <div class="info" id="info">
+                <ion-label>
+                  <h3 class="font-weight-normal mb-1">Firm Activity</h3>
+                </ion-label>
+
+                <p class="text-muted small">
+                  {{ company.firmActivity }}
+                </p>
+              </div>
+            </div>
+            <div class="bus-details pt-2 pb-0 px-2">
+              <div class="info" id="info">
+                <ion-label>
+                  <h3 class="font-weight-normal mb-1">Service Providing</h3>
+                </ion-label>
+
+                <p class="text-muted small">
+                  {{ company.serviceProviding }}
+                </p>
+              </div>
+            </div>
           </div>
 
           <div class="top-border-line">
@@ -109,31 +103,29 @@
               <!-- Pick Up Point -->
               <div class="pickpoint" id="pick">
                 <div class="bg-white rounded-1 mb-3 px-2">
-                  <h6 class="border-bottom text-purple">
-                    Company LandLine Number
-                  </h6>
+                  <h6 class="text-purple">Mobile Number</h6>
 
                   <div class="custom-control-label d-flex">
                     <p class="m-2 l-hght-10">
-                      <b> {{ company.landlineNumber }}</b>
+                      <fa-icon icon="mobile" class="mobile"></fa-icon
+                      ><span style="font-size: 20px">{{
+                        company.mobileNumber
+                      }}</span>
                     </p>
                   </div>
                 </div>
                 <div class="bg-white rounded-1 mb-3 px-2">
-                  <h6 class="border-bottom text-purple">Mobile Number</h6>
+                  <h6 class="text-purple">LandLine Number</h6>
 
                   <div class="custom-control-label d-flex">
                     <p class="m-2 l-hght-10">
-                      <b>{{ company.mobileNumber }}</b>
-                    </p>
-                  </div>
-                </div>
-                <div class="bg-white rounded-1 mb-3 px-2">
-                  <h6 class="border-bottom text-purple">Address</h6>
-
-                  <div class="custom-control-label d-flex">
-                    <p class="m-2 l-hght-10">
-                      <b>{{ company.location }}</b>
+                      <fa-icon
+                        icon="phone-square-alt"
+                        class="phone-square-alt"
+                      ></fa-icon>
+                      <span style="font-size: 20px">
+                        {{ company.landlineNumber }}</span
+                      >
                     </p>
                   </div>
                 </div>
