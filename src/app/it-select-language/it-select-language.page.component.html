@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <div
+      class="
+        osahan-header-nav
+        shadow-sm
+        p-3
+        d-flex
+        align-items-center
+        bg-purple
+      "
+    >
+      <h5 class="font-weight-normal mb-0 text-white">
+        <a class="text-purple" routerLink="/get-started"
+          ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
+        ></a>
+        <ion-title>Language</ion-title>
+      </h5>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content" fullscreen>
+  <!-- <cdk-virtual-scroll-viewport
+    class="scroll-viewport"
+    #scroll
+    itemSize="80"
+    minBufferPx="900"
+    maxBufferPx="1350"
+  > -->
+  <div class="osahan-listing p-0 m-0 row border-top">
+    <div class="p-3 border-bottom w-100 text-center">
+      <div class="bg-white border border-warning rounded-1 shadow-sm p-2">
+        <div class="row mx-0 px-1">
+          <div class="col-12 p-0">
+            <p class="small mb-0">CHOOSE YOUR LANGUAGE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col
+          size="6"
+          margin
+          routerLink="/signup"
+          class="text-dark px-0"
+          *ngFor="let language of languages"
+        >
+          <div
+            class="
+              list_item_gird
+              m-0
+              bg-white
+              shadow-sm
+              listing-item
+              border-bottom border-right
+            "
+          >
+            <div class="px-3 pt-3 tic-div">
+              <div class="list-item-img">
+                <img src="assets/img/listing/item1.png" class="img-fluid" />
+              </div>
+              <p class="mb-0 l-hght-10 text-center text-orange mb-2">
+                {{ language }}
+              </p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

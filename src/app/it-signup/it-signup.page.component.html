@@ -1,0 +1,178 @@
+<ion-header>
+  <ion-toolbar>
+    <div
+      class="
+        osahan-header-nav
+        shadow-sm
+        p-3
+        d-flex
+        align-items-center
+        bg-purple
+      "
+    >
+      <h5 class="font-weight-normal mb-0 text-white">
+        <a class="text-purple" routerLink="/get-started"
+          ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
+        ></a>
+        <ion-title>Create an Account</ion-title>
+      </h5>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content" fullscreen>
+  <!-- <cdk-virtual-scroll-viewport
+    class="scroll-viewport"
+    #scroll
+    itemSize="80"
+    minBufferPx="900"
+    maxBufferPx="1350"
+  > -->
+  <div class="osahan-signup">
+    <div class="px-3">
+      <form [formGroup]="createCompanyForm" #createForm>
+        <ion-list>
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">First Name</ion-label>
+            <ion-input
+              class="form-control rc-form-control"
+              placeholder="First name"
+              inputMode="text"
+              clearInput="true"
+              formControlName="firstName"
+              required
+            ></ion-input>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">Last Name</ion-label>
+            <ion-input
+              class="form-control rc-form-control"
+              placeholder="Last name"
+              inputMode="text"
+              clearInput="true"
+              formControlName="lastName"
+              required
+            ></ion-input>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">Company Name</ion-label>
+            <ion-input
+              class="form-control rc-form-control"
+              placeholder="Company Name"
+              inputMode="text"
+              clearInput="true"
+              formControlName="companyName"
+              required
+            ></ion-input>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">Firm Activity</ion-label>
+            <ion-select
+              interface="popover"
+              class="form-control rc-form-control"
+              role="combobox"
+              placeholder="Select One"
+              slot
+              formControlName="firmActivity"
+              required
+            >
+              <ion-select-option value="Freight Forwarders"
+                >Freight Forwarders</ion-select-option
+              >
+              <ion-select-option value="Booking">Booking</ion-select-option>
+              <ion-select-option value="Supplier">Supplier</ion-select-option>
+              <ion-select-option value="Owner">Owner</ion-select-option>
+            </ion-select>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1"
+              >Service Providing</ion-label
+            >
+            <ion-select
+              multiple="true"
+              class="form-control rc-form-control"
+              placeholder="Select Multiple"
+              formControlName="serviceProviding"
+              cancelText="cancel"
+              okText="ok"
+            >
+              <ion-select-option
+                *ngFor="let vehicleType of vehicleTypes"
+                selected="false"
+                value="{{ vehicleType }}"
+                title="{{ vehicleType }}"
+                >{{ vehicleType }}</ion-select-option
+              >
+            </ion-select>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">Location</ion-label>
+            <ion-select
+              interface="popover"
+              class="form-control rc-form-control"
+              placeholder="Select your Location"
+              formControlName="location"
+              required
+            >
+              <ion-select-option
+                *ngFor="let location of locations"
+                value="{{ location.name }}"
+                title="{{ location.name }}"
+                >{{ location.name }}</ion-select-option
+              >
+            </ion-select>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">Landline Number</ion-label>
+            <ion-input
+              class="form-control rc-form-control"
+              placeholder="Landline Number"
+              inputMode="tel"
+              clearInput="true"
+              formControlName="landlineNumber"
+              required
+            ></ion-input>
+          </div>
+
+          <div class="form-group mb-2">
+            <ion-label class="text-muted f-10 mb-1">Mobile Number</ion-label>
+            <ion-input
+              class="form-control rc-form-control"
+              placeholder="Mobile Number"
+              inputMode="tel"
+              clearInput="true"
+              formControlName="mobileNumber"
+              required
+            ></ion-input>
+          </div>
+        </ion-list>
+        <button
+          type="submit"
+          class="btn btn-purple btn-block osahanbus-btn mb-3 rounded-1 mt-3"
+          slot="end"
+          fill="clear"
+          (click)="createCompany(createCompanyForm.value)"
+        >
+          REGISTER
+        </button>
+      </form>
+      <div class="sign-or d-flex align-items-center justify-content-center">
+        <hr class="mr-4" />
+        <p class="text-muted text-center py-2 m-0">OR</p>
+        <hr class="ml-4" />
+      </div>
+      <div class="osahan-signin text-center text-purple p-1">
+        <p class="mb-3">
+          Already a member ?
+          <a routerLink="/signin" class="text-orange ml-2">Sign In</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>

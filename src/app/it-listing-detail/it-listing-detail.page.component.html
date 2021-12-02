@@ -1,0 +1,153 @@
+<ion-header>
+  <ion-toolbar>
+    <div
+      class="
+        osahan-header-nav
+        shadow-sm
+        p-3
+        d-flex
+        align-items-center
+        bg-purple
+      "
+    >
+      <h5 class="font-weight-normal mb-0 text-white">
+        <a class="text-purple" routerLink="/listing"
+          ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
+        ></a>
+        <ion-title>Company Details</ion-title>
+      </h5>
+      <div class="ml-auto d-flex align-items-center">
+        <ion-buttons slot="end">
+          <ion-menu-button
+            ><fa-icon icon="bars" class="icofont-navigation-menu"></fa-icon
+          ></ion-menu-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content" fullscreen>
+  <!-- <cdk-virtual-scroll-viewport
+    class="scroll-viewport"
+    #scroll
+    itemSize="80"
+    minBufferPx="900"
+    maxBufferPx="1350"
+  > -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngIf="company">
+        <div class="Bus-Details padding-bt">
+          <div class="list_item m-0 bg-white">
+            <div class="px-2 py-3 tic-div border-bottom d-flex">
+              <img
+                src="assets/img/listing/item1.png"
+                class="img-fluid border rounded p-1 shape-img mr-3"
+              />
+              <div class="w-100">
+                <ion-label>
+                  <h3 class="my-1 l-hght-18 font-weight-bold">
+                    {{ company.firstName }} {{ company.lastName }}
+                  </h3>
+                </ion-label>
+
+                <div class="start-rating f-10">
+                  <fa-icon
+                    icon="star"
+                    class="icofont-star text-orange"
+                  ></fa-icon>
+                  <fa-icon
+                    icon="star"
+                    class="icofont-star text-orange"
+                  ></fa-icon>
+                  <fa-icon
+                    icon="star"
+                    class="icofont-star text-orange"
+                  ></fa-icon>
+                  <fa-icon
+                    icon="star"
+                    class="icofont-star text-orange"
+                  ></fa-icon>
+                  <fa-icon
+                    icon="star"
+                    class="icofont-star text-muted"
+                  ></fa-icon>
+                  <span class="text-dark">4.0</span>
+                  <div class="d-flex mt-2">
+                    <p class="m-0">
+                      <i class="icofont-google-map mr-1 text-danger"></i
+                      ><span class="small">{{ company.location }}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bus-details pt-2 pb-0 px-2">
+              <div class="info" id="info">
+                <ion-label>
+                  <h3 class="font-weight-normal mb-3">
+                    About {{ company.companyName }}
+                  </h3>
+                </ion-label>
+
+                <p class="text-muted small">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-border-line">
+            <div class="bus-details">
+              <!-- Pick Up Point -->
+              <div class="pickpoint" id="pick">
+                <div class="bg-white rounded-1 mb-3 px-2">
+                  <h6 class="border-bottom text-purple">
+                    Company LandLine Number
+                  </h6>
+
+                  <div class="custom-control-label d-flex">
+                    <p class="m-2 l-hght-10">
+                      <b> {{ company.landlineNumber }}</b>
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-white rounded-1 mb-3 px-2">
+                  <h6 class="border-bottom text-purple">Mobile Number</h6>
+
+                  <div class="custom-control-label d-flex">
+                    <p class="m-2 l-hght-10">
+                      <b>{{ company.mobileNumber }}</b>
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-white rounded-1 mb-3 px-2">
+                  <h6 class="border-bottom text-purple">Address</h6>
+
+                  <div class="custom-control-label d-flex">
+                    <p class="m-2 l-hght-10">
+                      <b>{{ company.location }}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Button -->
+          <div class="osahan-fotter fixed-bottom m-3">
+            <a class="btn btn-purple btn-block osahanbus-btn rounded-1"
+              >Call Now</a
+            >
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

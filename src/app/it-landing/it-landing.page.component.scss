@@ -1,0 +1,39 @@
+/* Landing Page */
+.landing-page .slick-dots {
+  bottom: 96px;
+}
+.osahanbus-btlan {
+  font-size: 14px;
+  padding: 16px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.osahanbus-btn {
+  font-size: 14px;
+  padding: 14px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.osahanbus-social {
+  font-size: 14px;
+  padding: 14px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+.spinner {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
