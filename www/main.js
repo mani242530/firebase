@@ -197,21 +197,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ 9075);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ 9895);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic/angular */ 476);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic/angular */ 476);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 5041);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ 158);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ 3679);
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ 2340);
-/* harmony import */ var _angular_fire_app__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/fire/app */ 127);
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/fire/firestore */ 630);
+/* harmony import */ var _angular_fire_app__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/fire/app */ 127);
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/fire/firestore */ 630);
 /* harmony import */ var _new_contact_new_contact_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./new-contact/new-contact.page */ 2417);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ 1841);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ngx-translate/core */ 4236);
-/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ngx-translate/http-loader */ 830);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 4236);
+/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ngx-translate/http-loader */ 830);
 /* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ 5002);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ 9976);
 /* harmony import */ var _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons */ 1903);
 /* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ 5115);
+/* harmony import */ var ngx_avatar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-avatar */ 9110);
+
 
 
 
@@ -250,24 +252,25 @@ AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_8__.__decorate)([
             _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__.FontAwesomeModule,
             _angular_router__WEBPACK_IMPORTED_MODULE_12__.RouterModule,
             _angular_common_http__WEBPACK_IMPORTED_MODULE_13__.HttpClientModule,
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_14__.IonicModule.forRoot(),
-            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_15__.TranslateModule.forRoot({
+            ngx_avatar__WEBPACK_IMPORTED_MODULE_14__.AvatarModule,
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_15__.IonicModule.forRoot(),
+            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__.TranslateModule.forRoot({
                 loader: {
-                    provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_15__.TranslateLoader,
+                    provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__.TranslateLoader,
                     useFactory: HttpLoaderFactory,
                     deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_13__.HttpClient],
                 },
             }),
-            (0,_angular_fire_app__WEBPACK_IMPORTED_MODULE_16__.provideFirebaseApp)(() => (0,_angular_fire_app__WEBPACK_IMPORTED_MODULE_16__.initializeApp)(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.firebase)),
-            (0,_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__.provideFirestore)(() => (0,_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__.getFirestore)()),
+            (0,_angular_fire_app__WEBPACK_IMPORTED_MODULE_17__.provideFirebaseApp)(() => (0,_angular_fire_app__WEBPACK_IMPORTED_MODULE_17__.initializeApp)(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.firebase)),
+            (0,_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_18__.provideFirestore)(() => (0,_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_18__.getFirestore)()),
         ],
-        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_12__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_14__.IonicRouteStrategy }],
+        providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_12__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_15__.IonicRouteStrategy }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
     })
 ], AppModule);
 
 function HttpLoaderFactory(http) {
-    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_18__.TranslateHttpLoader(http, '/i18n/', '.json');
+    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_19__.TranslateHttpLoader(http, '/i18n/', '.json');
 }
 
 
@@ -755,7 +758,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\n  <ion-menu side=\"start\" contentId=\"app-content\">\n    <ion-content>\n      <a\n        href=\"#\"\n        class=\"\n          bg-purple\n          sidebar-user\n          d-flex\n          align-items-center\n          py-4\n          px-3\n          border-0\n          mb-0\n        \"\n        [routerDirection]=\"'root'\"\n        routerLink=\"/\"\n      >\n        <img\n          src=\"../assets/img/user1.jpg\"\n          class=\"img-fluid rounded-pill mr-3\"\n        />\n        <div class=\"text-white\">\n          <h6 class=\"mb-0\">I Am Osahan</h6>\n          <small>+91 12345-67890</small><br />\n          <span class=\"f-10 text-white-50\">Version 1.32</span>\n        </div>\n      </a>\n      <ion-list>\n        <ion-item detail=\"false\" [routerDirection]=\"'root'\" routerLink=\"/\">\n          <ion-icon name=\"mail\" slot=\"start\"></ion-icon>\n          <ion-label>Inbox</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"paper-plane\" slot=\"start\"></ion-icon>\n          <ion-label>Outbox</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"heart\" slot=\"start\"></ion-icon>\n          <ion-label>Favorites</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"archive\" slot=\"start\"></ion-icon>\n          <ion-label>Archived</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"trash\" slot=\"start\"></ion-icon>\n          <ion-label>Trash</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"warning\" slot=\"start\"></ion-icon>\n          <ion-label>Spam</ion-label>\n        </ion-item>\n      </ion-list>\n      <a\n        href=\"#\"\n        class=\"\n          bg-purple\n          sidebar-user\n          py-2\n          px-2border-0\n          mb-0\n          fixed-bottom\n          text-align-center\n        \"\n        [routerDirection]=\"'root'\"\n        routerLink=\"/\"\n      >\n        <div class=\"text-white\">\n          <h5 class=\"mb-0\">Logout</h5>\n        </div>\n      </a>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet\n    id=\"app-content\"\n    overflow-scroll=\"true\"\n  ></ion-router-outlet>\n</ion-app>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\n  <ion-menu side=\"start\" contentId=\"app-content\">\n    <ion-content>\n      <a\n        href=\"#\"\n        class=\"\n          bg-purple\n          sidebar-user\n          d-flex\n          align-items-center\n          py-4\n          px-3\n          border-0\n          mb-0\n        \"\n        [routerDirection]=\"'root'\"\n        routerLink=\"/\"\n      >\n        <!-- <img\n          src=\"../assets/img/user1.jpg\"\n          class=\"img-fluid rounded-pill mr-3\"\n        /> -->\n        <ngx-avatar\n          name=\"Indian Transport\"\n          (clickOnAvatar)=\"avatarClicked($event)\"\n          size=\"50\"\n        ></ngx-avatar>\n        <div class=\"text-white ml-2\">\n          <h6 class=\"mb-0\">I Am Osahan</h6>\n          <small>+91 12345-67890</small><br />\n          <span class=\"f-10 text-white-50\">Version 1.32</span>\n        </div>\n      </a>\n      <ion-list>\n        <ion-item detail=\"false\" [routerDirection]=\"'root'\" routerLink=\"/\">\n          <ion-icon name=\"mail\" slot=\"start\"></ion-icon>\n          <ion-label>Inbox</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"paper-plane\" slot=\"start\"></ion-icon>\n          <ion-label>Outbox</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"heart\" slot=\"start\"></ion-icon>\n          <ion-label>Favorites</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"archive\" slot=\"start\"></ion-icon>\n          <ion-label>Archived</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"trash\" slot=\"start\"></ion-icon>\n          <ion-label>Trash</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"warning\" slot=\"start\"></ion-icon>\n          <ion-label>Spam</ion-label>\n        </ion-item>\n      </ion-list>\n      <a\n        href=\"#\"\n        class=\"\n          bg-purple\n          sidebar-user\n          py-2\n          px-2border-0\n          mb-0\n          fixed-bottom\n          text-align-center\n        \"\n        [routerDirection]=\"'root'\"\n        routerLink=\"/\"\n      >\n        <div class=\"text-white\">\n          <h6 class=\"mb-0\">Logout</h6>\n        </div>\n      </a>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet\n    id=\"app-content\"\n    overflow-scroll=\"true\"\n  ></ion-router-outlet>\n</ion-app>\n");
 
 /***/ }),
 

@@ -16,11 +16,16 @@
         [routerDirection]="'root'"
         routerLink="/"
       >
-        <img
+        <!-- <img
           src="../assets/img/user1.jpg"
           class="img-fluid rounded-pill mr-3"
-        />
-        <div class="text-white">
+        /> -->
+        <ngx-avatar
+          name="Indian Transport"
+          (clickOnAvatar)="avatarClicked($event)"
+          size="50"
+        ></ngx-avatar>
+        <div class="text-white ml-2">
           <h6 class="mb-0">I Am Osahan</h6>
           <small>+91 12345-67890</small><br />
           <span class="f-10 text-white-50">Version 1.32</span>
@@ -67,7 +72,7 @@
         routerLink="/"
       >
         <div class="text-white">
-          <h5 class="mb-0">Logout</h5>
+          <h6 class="mb-0">Logout</h6>
         </div>
       </a>
     </ion-content>

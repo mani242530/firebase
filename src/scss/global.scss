@@ -1,6 +1,11 @@
 // http://ionicframework.com/docs/theming/
 @import "style";
 
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
 @import "~@ionic/angular/css/core.css";
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";

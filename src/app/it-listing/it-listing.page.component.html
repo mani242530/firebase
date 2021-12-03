@@ -20,7 +20,7 @@
           data-target="#filterModal"
           ><fa-icon icon="filter" class="icofont-filter"></fa-icon
         ></a> -->
-
+      <img src="assets/img/user1.jpg" class="img-fluid rounded-circle" />
       <ion-buttons slot="end">
         <ion-menu-button
           ><fa-icon icon="bars" class="icofont-navigation-menu"></fa-icon
@@ -114,6 +114,15 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-spinner name="crescent" *ngIf="showLoading"></ion-spinner>
+  <div class="d-flex justify-content-center">
+    <div
+      class="spinner-grow d-flex justify-content-center"
+      role="status"
+      *ngIf="showLoading"
+    >
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
   <!-- </cdk-virtual-scroll-viewport> -->
 </ion-content>

@@ -19,6 +19,7 @@ import {
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
   declarations: [AppComponent, NewContactPage],
@@ -30,6 +31,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     FontAwesomeModule,
     RouterModule,
     HttpClientModule,
+    AvatarModule,
     IonicModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

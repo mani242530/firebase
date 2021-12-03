@@ -31,12 +31,12 @@
 /* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"); */
 
 @font-face {
-  font-family: "HMAmpersand";
-  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Quicksand";
   font-size: 13px;
 }
 a {
@@ -429,7 +429,7 @@ h1.success-icon {
 }
 .osahan-header-nav .icofont-rounded-left {
   background: #ffffff;
-  border-radius: 50px;
+  border-radius: 5px;
   padding: 6px;
 }
 .osahan-header-nav .icofont-rounded-left:hover {
@@ -580,7 +580,7 @@ h1.success-icon {
   color: #ccc;
 }
 .rate:not(:checked) > label:before {
-  font-family: IcoFont !important;
+  font-family: Quicksand !important;
   speak: none;
   font-style: normal;
   font-weight: 400;
