@@ -8,6 +8,7 @@ import { IonicModule } from "@ionic/angular";
 import { ListingPageComponent } from "./it-listing.page.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { ListingPageRoutingModule } from "./it-listing.page.routing.module";
+import { TranslateModule } from "@ngx-translate/core";
 // import { ScrollingModule } from "@angular/cdk/scrolling/public-api";
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const MODULES = [
   FontAwesomeModule,
   // ScrollingModule,
   ListingPageRoutingModule, // ListingPageRoutingModule
+  TranslateModule
 ];
 
 /**

@@ -18,7 +18,7 @@ export class SplashPageComponent implements OnInit {
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this._translate.setDefaultLang('hi');
+    // this._translate.setDefaultLang('hi');
 
     // if (this._translate.getBrowserLang() !== undefined) {
     //   this._translate.use(this._translate.getBrowserLang());

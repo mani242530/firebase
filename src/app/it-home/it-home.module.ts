@@ -8,6 +8,7 @@ import { IonicModule } from "@ionic/angular";
 import { HomePageComponent } from "./it-home.page.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { HomePageRoutingModule } from "./it-home.routing.module";
+import { TranslateModule } from "@ngx-translate/core";
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const MODULES = [
   RouterModule.forChild(routes),
   FontAwesomeModule,
   HomePageRoutingModule,
+  TranslateModule
 ];
 
 /**

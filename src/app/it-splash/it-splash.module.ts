@@ -30,13 +30,14 @@ const MODULES = [
   RouterModule.forChild(routes),
   SplashPageRoutingModule, // SplashPageRoutingModule
   FontAwesomeModule,
-  TranslateModule.forRoot({
-    loader: {
-      provide: TranslateLoader,
-      useFactory: HttpLoaderFactory,
-      deps: [HttpClient],
-    },
-  }),
+  TranslateModule
+  // TranslateModule.forRoot({
+  //   loader: {
+  //     provide: TranslateLoader,
+  //     useFactory: HttpLoaderFactory,
+  //     deps: [HttpClient],
+  //   },
+  // }),
 ];
 
 /**
@@ -62,6 +63,6 @@ const PROVIDERS = [DataService];
 })
 export class SplashPageModule {}
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, "i18n/", ".json");
-}
+// export function HttpLoaderFactory(http: HttpClient) {
+//   return new TranslateHttpLoader(http, "i18n/", ".json");
+// }

@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { SelectVehiclePageComponent } from './it-select-vehicle.page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SelectVehiclePageRoutingModule } from './it-select-vehicle.page.routing.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const MODULES = [
   RouterModule.forChild(routes),
   FontAwesomeModule,
   SelectVehiclePageRoutingModule, // SelectVehiclePageRoutingModule
+  TranslateModule
 ];
 
 /**

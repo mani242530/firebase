@@ -7,7 +7,7 @@
       <a class="text-purple" routerLink="/get-started"
         ><fa-icon icon="arrow-left" class="icofont-rounded-left"></fa-icon
       ></a>
-      <ion-title>Payment</ion-title>
+      <ion-title>{{'APP.PAYMENT.TITLE' | translate}}</ion-title>
     </h5>
   </div>
   <!-- </ion-toolbar> -->
@@ -82,10 +82,9 @@
                 >
                   <a class="d-flex align-items-start">
                     <div class="">
-                      <p class="mb-0 text-dark">Mastercard / Visa / Rupay</p>
+                      <p class="mb-0 text-dark">{{'APP.PAYMENT.LABEL.MASTERCARD' | translate}}</p>
                       <small class="text-muted"
-                        >Pay from mastercard account using mastercard payment
-                        gateway</small
+                        >{{'APP.PAYMENT.TEXT.PAY_FROM_MASTERCARD' | translate}}</small
                       >
                     </div>
                     <img
@@ -117,10 +116,9 @@
                 >
                   <a class="d-flex align-items-start">
                     <div class="">
-                      <p class="mb-0 text-dark">Net Banking</p>
+                      <p class="mb-0 text-dark">{{'APP.PAYMENT.LABEL.NET_BANKING' | translate}}</p>
                       <small class="text-muted"
-                        >Pay from your bank account using net banking
-                        gateway</small
+                        >{{'APP.PAYMENT.TEXT.PAY_FROM_BANK' | translate}}</small
                       >
                     </div>
                     <img
@@ -137,14 +135,14 @@
       <!-- Select Payment -->
       <div class="payment-borrad bg-white m-0 p-3">
         <div class="d-flex small">
-          <p>Total Payable INR</p>
-          <p class="ml-auto font-weight-bold text-danger">5,000</p>
+          <p>{{'APP.PAYMENT.TEXT.TOTAL_PAYABLE' | translate}}</p>
+          <p class="ml-auto font-weight-bold text-danger">{{'APP.PAYMENT.TEXT.AMOUNT' | translate}}</p>
         </div>
         <div class="small">
           <div class="form-group row mb-3">
             <div class="d-flex align-items-start">
               <label for="exampleInputEmail1" class="mb-1 small text-label"
-                >Card Number</label
+                >{{'APP.PAYMENT.LABEL.CARD_NUMBER' | translate}}</label
               >
               <img
                 src="assets/img/master-card.png"
@@ -155,7 +153,7 @@
               <input
                 type="number"
                 class="form-control form-control-sm px-1"
-                placeholder="1234 5678 9145 4589"
+                placeholder="{{'APP.PAYMENT.PLACEHOLDER.NUMBER' | translate}}"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
@@ -164,13 +162,13 @@
           <div class="form-group row mb-3">
             <div class="col-8">
               <label for="exampleInputmondate1" class="mb-1 small text-label"
-                >Month / Date</label
+                >{{'APP.PAYMENT.LABEL.DATE' | translate}}</label
               >
               <div class="d-flex border rounded">
                 <input
                   type="number"
                   class="form-control text-center form-control-sm border-0 px-1"
-                  placeholder="DD"
+                  placeholder="{{'APP.PAYMENT.PLACEHOLDER.DD' | translate}}"
                   id="exampleInputmondate1"
                   aria-describedby="mondateHelp"
                 />
@@ -178,7 +176,7 @@
                 <input
                   type="number"
                   class="form-control text-center form-control-sm border-0 px-1"
-                  placeholder="MM"
+                  placeholder="{{'APP.PAYMENT.PLACEHOLDER.MM' | translate}}"
                   id="exampleInputmondate1"
                   aria-describedby="mondateHelp"
                 />
@@ -186,12 +184,12 @@
             </div>
             <div class="col-4">
               <label for="exampleInputcvv1" class="mb-1 small text-muted"
-                >CVV</label
+                >{{'APP.PAYMENT.LABEL.CVV' | translate}}</label
               >
               <input
                 type="number"
                 class="form-control text-center form-control-sm"
-                placeholder="000"
+                placeholder="{{'APP.PAYMENT.PLACEHOLDER.CVV' | translate}}"
                 id="exampleInputcvv1"
                 aria-describedby="cvvHelp"
               />
@@ -207,7 +205,7 @@
                 data-target="#paymentModal"
                 routerLink="/select-vehicle"
               >
-                Pay
+              {{'APP.PAYMENT.BUTTON.PAY' | translate}}
               </button>
             </div>
           </div>

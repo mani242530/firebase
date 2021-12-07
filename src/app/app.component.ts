@@ -17,7 +17,7 @@ export class AppComponent {
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translateService.setDefaultLang('hi');
+    this.translateService.setDefaultLang('en');
 
     // if (this.translateService.getBrowserLang() !== undefined) {
     //   this.translateService.use(this.translateService.getBrowserLang());

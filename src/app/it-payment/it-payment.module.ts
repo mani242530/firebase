@@ -8,6 +8,7 @@ import { IonicModule } from "@ionic/angular";
 import { PaymentPageComponent } from "./it-payment.page.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { PaymentPageRoutingModule } from "./it-payment.routing.module";
+import { TranslateModule } from "@ngx-translate/core";
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const MODULES = [
   RouterModule.forChild(routes),
   FontAwesomeModule,
   PaymentPageRoutingModule, // PaymentPageRoutingModule
+  TranslateModule
 ];
 
 /**
