@@ -21,42 +21,50 @@
     minBufferPx="900"
     maxBufferPx="1350"
   > -->
-  <div class="osahan-listing container d-flex h-100">
-    <div class="row border-top pt-5">
-      <ion-grid>
-        <ion-row>
-          <ion-col
-            size="4"
-            margin
-            routerLink="/signup"
-            class="text-dark text-center"
-            *ngFor="let language of languages"
+  <div
+    class="
+      osahan-index
+      bg-c
+      d-flex
+      align-items-center
+      justify-content-center
+      vh-100
+      index-page
+    "
+  >
+    <ion-grid>
+      <ion-row>
+        <ion-col
+          size="4"
+          margin
+          routerLink="/signup"
+          class="text-dark text-center"
+          *ngFor="let language of languages"
+        >
+          <div
+            class="
+              list-item-img
+              language-item-list
+              align-items-center
+              d-inline-flex
+              justify-content-center
+            "
+            id="{{ language.id }}"
+            (click)="useSelectedLanguage(language.id)"
           >
-            <div
-              class="
-                list-item-img
-                language-item-list
-                align-items-center
-                d-inline-flex
-                justify-content-center
-              "
-              id="{{ language.id }}"
-              (click)="selectLanguage(language.id)"
-            >
-              <!-- <img
+            <!-- <img
                 src="../../assets/img/language//telugu.png"
                 class="img-fluid"
               /> -->
-              <span class="mb-0 l-hght-10 text-center text-black mb-2 p-1">
-                {{ language.name }}</span
-              >
-            </div>
-            <!-- <p class="l-hght-10 text-center text-black mb-2">
+            <span class="mb-0 l-hght-10 text-center text-black mb-2 p-1">
+              {{ language.name }}</span
+            >
+          </div>
+          <!-- <p class="l-hght-10 text-center text-black mb-2">
               {{ language }}
             </p> -->
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

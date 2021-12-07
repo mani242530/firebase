@@ -75,6 +75,10 @@
         "FROM": "से",
         "TO": "तक"
       },
+      "PLACEHOLDER": {
+        "SELECT_FROM_LOCATION": "स्थान से चुनें",
+        "SELECT_TO_LOCATION": "स्थान का चयन करें"
+      },
       "TEXT": {
         "SAFE_AND_HYGEINIC": "सुरक्षित और स्वच्छ",
         "VEHICLES": "वाहन",

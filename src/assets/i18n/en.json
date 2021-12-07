@@ -75,6 +75,10 @@
         "FROM": "From",
         "TO": "To"
       },
+      "PLACEHOLDER": {
+        "SELECT_FROM_LOCATION": "Select From Location",
+        "SELECT_TO_LOCATION": "Select To Location"
+      },
       "TEXT": {
         "SAFE_AND_HYGEINIC": "Safe and Hygenic",
         "VEHICLES": "Vehicles",

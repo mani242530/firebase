@@ -45,7 +45,7 @@ export class SelectLanguagePageComponent implements OnInit {
 
   ngOnInit() {}
 
-  selectLanguage(language){
+  useSelectedLanguage(language){
    this.translateService.use(language)
   }
 }

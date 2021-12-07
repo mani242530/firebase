@@ -21,13 +21,23 @@
     minBufferPx="900"
     maxBufferPx="1350"
   > -->
-  <div class="osahan-signup">
+  <div
+    class="
+      osahan-index
+      bg-c
+      d-flex
+      align-items-center
+      justify-content-center
+      vh-100
+      index-page
+    "
+  >
     <div class="px-3 py-3">
       <form [formGroup]="createCompanyForm" #createForm>
         <ion-list>
           <div class="form-group mb-3">
             <ion-input
-              class="form-control rc-form-control"
+              class="form-control rc-form-control it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.FIRST_NAME' | translate}}"
               inputMode="text"
               clearInput="true"
@@ -38,7 +48,7 @@
 
           <div class="form-group mb-3">
             <ion-input
-              class="form-control rc-form-control"
+              class="form-control rc-form-control it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.LAST_NAME' | translate}}"
               inputMode="text"
               clearInput="true"
@@ -49,7 +59,7 @@
 
           <div class="form-group mb-3">
             <ion-input
-              class="form-control rc-form-control"
+              class="form-control rc-form-control it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.COMPANY_NAME' | translate}}"
               inputMode="text"
               clearInput="true"
@@ -61,7 +71,7 @@
           <div class="form-group mb-3">
             <ion-select
               interface="popover"
-              class="form-control rc-form-control native-select"
+              class="form-control rc-form-control native-select it-form-control"
               role="combobox"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.SELECT_FIRM_ACTIVITY' | translate}}"
               slot
@@ -80,7 +90,7 @@
           <div class="form-group mb-3">
             <ion-select
               multiple="true"
-              class="form-control rc-form-control native-select"
+              class="form-control rc-form-control native-select it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.SELECT_SERVICE_PROVIDING' | translate}}"
               formControlName="serviceProviding"
               cancelText="{{'APP.CREATE_ACCOUNT.BUTTON.CANCEL' | translate}}"
@@ -99,7 +109,7 @@
           <div class="form-group mb-3">
             <ion-select
               interface="popover"
-              class="form-control rc-form-control native-select"
+              class="form-control rc-form-control native-select it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.SELECT_LOCATION' | translate}}"
               formControlName="location"
               required
@@ -115,7 +125,7 @@
 
           <div class="form-group mb-3">
             <ion-input
-              class="form-control rc-form-control"
+              class="form-control rc-form-control it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.MOBILE_NUMBER' | translate}}"
               inputMode="tel"
               clearInput="true"
@@ -126,7 +136,7 @@
 
           <div class="form-group mb-3">
             <ion-input
-              class="form-control rc-form-control"
+              class="form-control rc-form-control it-form-control"
               placeholder="{{'APP.CREATE_ACCOUNT.PLACEHOLDER.LANDLINE_NUMBER' | translate}}"
               inputMode="tel"
               clearInput="true"
@@ -136,7 +146,7 @@
         </ion-list>
         <button
           type="submit"
-          class="btn btn-purple btn-block osahanbus-btn mb-3 rounded-1 mt-3"
+          class="btn btn-purple btn-block osahanbus-btn rounded-1"
           slot="end"
           fill="clear"
           [disabled]="!createCompanyForm.valid"
